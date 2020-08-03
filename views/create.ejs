@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <br>
+    <br>
+    <div class="row justify-content-center">
+
+        <form action="/blogs" method="POST" class="col-6 ">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="title">Blog Title:</label>
+                    <input name="title" type="text" class="form-control" id="title" required>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="snippet">Blog Snippet:</label>
+                    <input name="snippet" type="text" class="form-control" id="snippet" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="body">Blog Body:</label>
+                    <!-- <input type="text" class="form-control" id="validationDefault03" required> -->
+                    <textarea class="form-control" name="body" id="body" cols="60" rows="10" required></textarea>
+                </div>
+            </div>
+
+            <br>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+    </div>
+    <br>
+    <hr>
+    <%- include('./partials/footer.ejs') %>
+
+
+
+
+</body>
+
+</html>
